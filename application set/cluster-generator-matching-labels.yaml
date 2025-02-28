@@ -6,9 +6,9 @@ metadata:
 spec:
   generators:
   - clusters:
-     selector:
-       matchLabels:
-        non-prod: "true"
+      selector:
+        matchLabels:
+          non-prod: "true"
 
   template:
     metadata:
@@ -17,12 +17,12 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/mabusaa/argocd-example-apps.git
-        targetRevision: master
+        repoURL: https://github.com/sharet-adl/argocd-example-apps.git
+        targetRevision: test-follow
         path: guestbook
       destination:
         server: '{{server}}'
         namespace: guestbook-2
       syncPolicy:
-         syncOptions:
-          - CreateNamespace=true
+        syncOptions:
+        - CreateNamespace=true

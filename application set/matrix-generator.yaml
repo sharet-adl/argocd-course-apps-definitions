@@ -8,8 +8,8 @@ spec:
   - matrix:
       generators:
       - git:
-          repoURL: https://github.com/mabusaa/argocd-example-apps.git
-          revision: master
+          repoURL: https://github.com/sharet-adl/argocd-example-apps.git
+          revision: test-follow
           directories:
           - path: helmcharts/security-policy-charts/*
       - clusters:
@@ -23,12 +23,12 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/mabusaa/argocd-example-apps.git
-        targetRevision: master
+        repoURL: https://github.com/sharet-adl/argocd-example-apps.git
+        targetRevision: test-follow
         path: '{{path}}'
       destination:
         server: '{{server}}'
         namespace: '{{ nameNormalized }}-{{path.basename}}'
       syncPolicy:
-         syncOptions:
-          - CreateNamespace=true
+        syncOptions:
+        - CreateNamespace=true

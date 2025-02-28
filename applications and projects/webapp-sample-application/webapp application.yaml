@@ -1,6 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata: 
+metadata:
   name: webapp
   namespace: argocd
 spec:
@@ -8,13 +8,11 @@ spec:
     namespace: webapp
     server: "https://kubernetes.default.svc"
   project: default
-  source: 
+  source:
     path: helm/webapp
-    repoURL: "https://github.com/mabusaa/argocd-course-webapp-config.git"
-    targetRevision: main
+    repoURL: "https://github.com/sharet-adl/argocd-course-webapp-config.git"
+    targetRevision: test-follow
   syncPolicy:
     automated: {}
     syncOptions:
-      - CreateNamespace=true
-
-    
+    - CreateNamespace=true

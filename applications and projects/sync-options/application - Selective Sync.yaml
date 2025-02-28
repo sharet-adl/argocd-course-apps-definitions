@@ -10,8 +10,8 @@ spec:
   project: default
   source: 
     path: sync-options/selective-sync
-    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
-    targetRevision: master
+    repoURL: "https://github.com/sharet-adl/argocd-example-apps.git"
+    targetRevision: test-follow
     directory:
       recurse: true
   syncPolicy:

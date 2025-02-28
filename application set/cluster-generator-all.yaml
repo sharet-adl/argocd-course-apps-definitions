@@ -13,12 +13,12 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/mabusaa/argocd-example-apps.git
-        targetRevision: master
+        repoURL: https://github.com/sharet-adl/argocd-example-apps.git
+        targetRevision: test-follow
         path: guestbook
       destination:
         server: '{{server}}'
         namespace: guestbook-1
       syncPolicy:
-         syncOptions:
-          - CreateNamespace=true
+        syncOptions:
+        - CreateNamespace=true
